@@ -6,16 +6,8 @@ class Barang {
 
   Barang(this._kodeBarang, this._namaBarang, this._stokBarang, this._idBarang);
 
-  void tambahStok(int jumlah) {
-    _stokBarang += jumlah;
-  }
-
-  void kurangiStok(int jumlah) {
-    if (_stokBarang >= jumlah) {
-      _stokBarang -= jumlah;
-    } else {
-      print("Stok tidak cukup");
-    }
+  set stokBarang(int value) {
+    _stokBarang = value;
   }
 
   int get idBarang {
